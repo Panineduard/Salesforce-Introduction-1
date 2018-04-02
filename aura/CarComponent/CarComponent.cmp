@@ -1,0 +1,11 @@
+<aura:component description="CarComponent" controller="CarLightningController" implements="force:appHostable">
+    <aura:attribute name="recordId" type="String" access="private" default="a060Y00000PbfgbQAB"/>
+    <aura:attribute name="car" type="Object" access="private"/>
+
+    <lightning:recordViewForm objectApiName="Car__c" recordId="{!v.recordId}"/>
+
+    <div class="slds-grid">
+        <lightning:input label="Name" value="{!v.carName}"/>
+        <lightning:button iconName="utils:save" onclick="{!c.saveCar}"/>
+    </div>
+</aura:component>

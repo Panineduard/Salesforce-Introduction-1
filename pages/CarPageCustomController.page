@@ -1,0 +1,11 @@
+<apex:page controller="DemoControllerForVisualforce" lightningStylesheets="true">
+    <apex:form>
+        <apex:pageBlock title="Congratulations">
+            <br/>
+            <apex:inputtext title="Name" value="{!name}" /><br/><br/>
+            <apex:inputtext title="Model" value="{!model}" /><br/><br/>
+            <apex:inputtext title="Brand" value="{!brand}" /><br/><br/>
+            <apex:commandButton action="{!save}" value="save"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
