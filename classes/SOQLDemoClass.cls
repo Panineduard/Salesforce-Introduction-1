@@ -24,4 +24,10 @@ public with sharing class SOQLDemoClass {
 	public static void runRightInnerJoin() {
 		System.debug([SELECT Name FROM Car__c WHERE Owner__r.Name = 'Eduard']);
 	}
+
+	public static void insertNewCar(String carName) {
+		Car__c newCar = new Car__c(Name=carName);
+		insert new List<Car__c>{newCar};
+	}
+
 }
